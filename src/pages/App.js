@@ -65,7 +65,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="header">
+        <section className="header">
           <div className="header_img-logo">
             <a href="/">
               <img src={Logo}></img>
@@ -75,67 +75,79 @@ class App extends React.Component {
             <a href="documentation">Docs</a>
             <a href="About">About</a>
             <div className="header_container-links-button">
-              <a href="help-us">HELP US</a>
+              <a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1rem"
+                  height="1rem"
+                  fill="currentColor"
+                  class="bi bi-suit-heart-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                </svg>
+              </a>
+              <div className="btn-heart">
+                <a className="help-us" href="help-us">
+                  HELP US
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="hero">
-          <div className="Hero_title">
+        </section>
+        <section className="hero">
+          <div className="hero_title">
             <h1>The Rick and Morty API</h1>
           </div>
-        </div>
-        <div className="container_character">
-          <div className="container_character-card">
-            <div className="container_card-image">
-              {this.state.data.results.map((props) => (
-                <li key={props.id}>
-                  <div className="container_card-API">
-                    <div className="container_box-image">
-                      <img src={props.image} alt={props.name}></img>
-                      <div className="container_box-descriptions">
-                        <a
-                          className="Name"
-                          href={`https://rickandmortyapi.com/api/character/${props.id}`}
-                        >
-                          {props.name}
-                        </a>
-                        <h4>
-                          <StatusColor status={props.status} />
-                          {props.status}-{props.species}
-                        </h4>
-                        <p>Last known location:</p>
-                        <a
-                          className="Location"
-                          href={`https://rickandmortyapi.com/api/location/${props.id}`}
-                        >
-                          {props.location.name}
-                        </a>
-                        <p>First seen in:</p>
-                        <ul>
-                          {this.state.loading && (
-                            <div className="loader">
-                              <Loader />
-                            </div>
-                          )}
-                        </ul>
-                        {/* <div>
-                    {this.state.data3.results.map(props=>(
-                      <li className="prueba" key={props.id}>
-                      <a >{props.name}
+        </section>
+        <section className="container_character">
+          <div className="container_card-image">
+            {this.state.data.results.map((props) => (
+              <li key={props.id}>
+                <article className="container_card-API">
+                  <div className="container_box-image">
+                    <img src={props.image} alt={props.name}></img>
+                  </div>
+                  <div className="container_box-description">
+                    <div className="box_name-status">
+                      <a
+                        className="name"
+                        href={`https://rickandmortyapi.com/api/character/${props.id}`}
+                      >
+                        <h2>{props.name}</h2>
                       </a>
-                      </li>))}
-                    </div> */}
-                      </div>
+                      <h4>
+                        <StatusColor status={props.status} />
+                        {props.status}-{props.species}
+                      </h4>
+                    </div>
+                    <div className="box_location">
+                      <p>Last known location:</p>
+                      <a
+                        href={`https://rickandmortyapi.com/api/location/${props.id}`}
+                      >
+                        {props.location.name}
+                      </a>
+                    </div>
+                    <div className="box_first-seen">
+                      <p>First seen in:</p>
+                      <ul>
+                        {this.state.loading && (
+                          <div className="loader">
+                            <Loader />
+                          </div>
+                        )}
+                      </ul>
                     </div>
                   </div>
-                </li>
-              ))}
+                </article>
+              </li>
+            ))}
 
-              <img src={""} id="characterImg" height="200"></img>
-            </div>
-            <div className="container_card-description"></div>
+            <img src={""} id="characterImg"></img>
           </div>
-        </div>
+          <div className="container_card-description"></div>
+        </section>
         {!this.state.loading && (
           <button
             className="btn-primary"
