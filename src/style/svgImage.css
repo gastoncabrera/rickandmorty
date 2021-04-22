@@ -1,0 +1,14 @@
+@charset "utf-8";
+ul.social-icon {
+  margin: 10px 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+ul.social-icon > li {
+  padding: 5px 15px;
+}
+.social-icon > li :hover {
+  fill: rgb(255, 152, 0);
+}

@@ -1,0 +1,23 @@
+h6 {
+  font-size: 100px;
+  color: red;
+  height: 80px;
+  width: 100px;
+  border: 1px solid red;
+}
+.Alive {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: green;
+  display: flex;
+  margin-right: 5px;
+}
+.Dead {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  margin-right: 5px;
+}

@@ -1,0 +1,42 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: #202329;
+  margin: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .header {
+    font-size: 5.6rm;
+  }
+  .hero {
+    font-weight: 900;
+    font-size: 1.75rm;
+  }
+  .container_card-image {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    font-size: 1 rm;
+    font-weight: 400;
+  }
+  .Hero_title h1 {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body {
+    margin: 0px;
+  }
+  .hero {
+    font-size: 1 rm;
+    font-weight: 400;
+  }
+}
