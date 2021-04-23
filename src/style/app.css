@@ -53,12 +53,17 @@
 }
 
 /* hero */
-.hero_title h1 {
+.hero {
+  height: 13rem;
+}
+
+.hero h1 {
   font-size: 3rem;
   text-align: center;
   justify-content: center;
   font-weight: 900;
   line-height: 3.2rem;
+  height: 100%;
 }
 
 /* character */
@@ -249,13 +254,15 @@
   border-color: rgb(255, 152, 0);
 }
 @media screen and (min-width: 375px) {
-  .hero_title {
+  .hero {
     width: 90%;
     margin: 2rem auto;
   }
   .hero h1 {
+    display: flex;
     font-size: 3.5rem;
     line-height: 4rem;
+    align-items: center;
   }
 }
 @media screen and (min-width: 650px) {
@@ -285,6 +292,22 @@
   }
   .container_card-image {
     padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 925px) {
+  .hero {
+    height: 18rem;
+  }
+  .hero h1 {
+    width: 100%;
+    line-height: 7rem;
+    font-size: 5.5rem;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1260px) {
+  .hero {
+    height: 15rem;
   }
   .container_card-image li {
     width: 49%;

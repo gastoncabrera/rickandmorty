@@ -94,9 +94,7 @@ class App extends React.Component {
           </div>
         </section>
         <section className="hero">
-          <div className="hero_title">
-            <h1>The Rick and Morty API</h1>
-          </div>
+          <h1>The Rick and Morty API</h1>
         </section>
         <section className="container_character">
           <div className="container_card-image">
