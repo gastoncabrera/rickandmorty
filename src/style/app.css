@@ -4,7 +4,7 @@
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 0.5rem;
   align-items: center;
 }
 .header_img-logo img {
@@ -27,21 +27,19 @@
 .header_container-links-button a {
   display: flex;
   box-sizing: border-box;
-  font-weight: bolder;
-  font-size: 16px;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.4rem;
   border: 1px solid rgb(255, 152, 0);
   color: rgb(36, 40, 47);
-  background-color: transparent;
+  background-color: rgb(255, 152, 0);
 }
-.header_container-links .btn-heart {
+.header_container-links .btn-help-us a {
   display: none;
   box-sizing: border-box;
   font-weight: bolder;
-  font-size: 16px;
-  padding: 3px 12px;
-  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
   border: 1px solid rgb(255, 152, 0);
   color: rgb(36, 40, 47);
   background-color: transparent;
@@ -49,7 +47,7 @@
 .header_container-links :hover {
   color: rgb(255, 152, 0);
 }
-.header_container-links-button :hover {
+.header_container-links-button .btn-help-us :hover {
   color: white;
   background-color: rgb(255, 152, 0);
 }
@@ -59,13 +57,15 @@
   font-size: 3rem;
   text-align: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 900;
+  line-height: 3.2rem;
 }
 
 /* character */
 .container_character {
   background-color: rgb(36, 40, 47);
   height: auto;
+  width: 100%;
 }
 .container_card-image {
   display: flex;
@@ -74,15 +74,20 @@
 }
 .container_card-API {
   border: 1px solid transparent;
-  border-radius: 10px;
-  margin: 10px 20px;
+  border-radius: 0.6rem;
+  margin: 0.8rem 1.4rem;
   min-height: 28rem;
-  max-width: 18rem;
+  width: 18rem;
   display: grid;
-  vertical-align: middle;
   background-color: rgb(60, 62, 68);
 }
+.container_card-image li {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
 .container_box-image img {
+  width: 100%;
   overflow: hidden;
   object-fit: cover;
   object-position: center center;
@@ -110,10 +115,10 @@
   line-height: 1.5rem;
 }
 .box_name-status h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 2rem;
-  height: 5.5rem;
+  height: 4.2rem;
 }
 .box_name-status h4 {
   font-weight: 600;
@@ -126,10 +131,13 @@
   font-size: 27px;
 }
 .name :hover {
-  color: black;
+  color: rgb(255, 152, 0);
 }
 .box_location {
   line-height: 1.5rem;
+}
+.box_location p {
+  font-weight: 600;
 }
 .box_location a :hover {
   color: rgb(255, 152, 0);
@@ -137,25 +145,46 @@
 .box_first-seen {
   margin: 1rem 0;
 }
-/* footer */
-.footer {
-  background-color: rgb(32, 35, 41);
-  height: 300px;
-  max-width: auto;
+.box_first-seen p {
+  font-weight: 600;
 }
-.footer {
+/* footer */
+.container_footer {
+  background-color: rgb(32, 35, 41);
+  height: 26rem;
   justify-content: center;
-  align-items: center;
   display: flex;
 }
-
+.footer {
+  margin: 0.5rem;
+  padding: 3rem 0;
+}
+.content_links-API {
+  display: flex;
+}
 .content_links-API a {
-  color: white;
-  font-size: 13px;
+  color: rgb(155, 158, 158);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5rem;
   text-decoration: none;
-  margin: 5px 10px;
+  margin: 0.3rem 0.5rem;
 }
 .content_links-API :hover {
+  color: rgb(255, 152, 0);
+}
+.content_link-server a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(155, 158, 158);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.content_link-server :hover {
   color: rgb(255, 152, 0);
 }
 .content_liks {
@@ -183,33 +212,28 @@
   height: 80px;
   width: 130px;
 }
-.content_link-server a {
+.creator-container {
   display: flex;
   justify-content: center;
-  text-decoration: none;
+  align-items: center;
   color: white;
-  margin-top: 15px;
-  font-size: 13px;
+  font-size: 0.9rem;
+  margin-top: 1.3rem;
 }
-.creator {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 13px;
-  margin-top: 20px;
+.creator-container span {
+  color: rgb(155, 158, 158);
 }
 .creator a {
   text-decoration: none;
   color: white;
   border-bottom: 1px solid rgb(255, 152, 0);
-  font-weight: bolder;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 2rem;
 }
-.creator :hover a {
+.creator :hover {
   color: rgb(255, 152, 0);
   border-bottom: transparent;
-}
-.content_link-server :hover {
-  color: rgb(255, 152, 0);
 }
 .content_liks a {
   color: orangered;
@@ -218,4 +242,51 @@
   border-color: white;
   height: 100px;
   width: 100%;
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: rgb(32, 35, 39);
+  color: rgb(255, 152, 0);
+  border-color: rgb(255, 152, 0);
+}
+@media screen and (min-width: 375px) {
+  .hero_title {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+@media screen and (min-width: 650px) {
+  .header_container-links-button a {
+    display: none;
+  }
+  .header_container-links .btn-help-us a {
+    display: flex;
+  }
+  .container_card-API {
+    display: flex;
+    width: 40rem;
+    min-height: 0;
+    height: 14rem;
+  }
+  .container_box-image {
+    width: 15rem;
+    height: 14rem;
+    align-content: center;
+    display: flex;
+  }
+  .container_box-description {
+    min-height: 0;
+  }
+  .box_name-status h2 {
+    height: auto;
+  }
+  .container_card-image {
+    padding: 3rem 0;
+  }
+  .container_card-image li {
+    width: 49%;
+  }
 }

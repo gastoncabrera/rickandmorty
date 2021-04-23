@@ -78,19 +78,17 @@ class App extends React.Component {
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="1rem"
-                  height="1rem"
-                  fill="currentColor"
+                  width=".8rem"
+                  height=".8rem"
+                  fill="white"
                   class="bi bi-suit-heart-fill"
                   viewBox="0 0 16 16"
                 >
                   <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
                 </svg>
               </a>
-              <div className="btn-heart">
-                <a className="help-us" href="help-us">
-                  HELP US
-                </a>
+              <div className="btn-help-us">
+                <a href="help-us">HELP US</a>
               </div>
             </div>
           </div>
@@ -131,13 +129,6 @@ class App extends React.Component {
                     </div>
                     <div className="box_first-seen">
                       <p>First seen in:</p>
-                      <ul>
-                        {this.state.loading && (
-                          <div className="loader">
-                            <Loader />
-                          </div>
-                        )}
-                      </ul>
                     </div>
                   </div>
                 </article>
@@ -146,7 +137,6 @@ class App extends React.Component {
 
             <img src={""} id="characterImg"></img>
           </div>
-          <div className="container_card-description"></div>
         </section>
         {!this.state.loading && (
           <button
@@ -156,8 +146,8 @@ class App extends React.Component {
             Load More
           </button>
         )}
-        <div className="footer">
-          <div>
+        <section className="container_footer">
+          <div className="footer">
             <div className="content_links-API">
               <a href="">CHARACTERS: {this.state.data.info.count}</a>
               <a href="">LOCATIONS: {this.state.data2.info.count}</a>
@@ -172,13 +162,20 @@ class App extends React.Component {
             <div className="netlify">
               <img src={Netlify} alt=""></img>
             </div>
-            <div className="creator">
-              <span>
+            <div className="creator-container">
+              <span className="creator">
                 ❮❯ by <a href="">Cabrera Gaston</a> 2021
               </span>
             </div>
           </div>
-        </div>
+        </section>
+        <ul>
+          {this.state.loading && (
+            <div className="loader">
+              <Loader />
+            </div>
+          )}
+        </ul>
       </div>
     );
   }
