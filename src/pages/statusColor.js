@@ -3,9 +3,9 @@ import "../style/statusColor.css";
 
 function statusColor(props) {
   const status = props.status;
-  if (status === "Alive") {
-    return <div className="Alive"></div>;
+  if (status === "alive") {
+    return <div className="alive"></div>;
   }
-  return <div className="Dead"></div>;
+  return <div className="dead"></div>;
 }
 export default statusColor;

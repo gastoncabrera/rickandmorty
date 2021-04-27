@@ -1,11 +1,4 @@
-h6 {
-  font-size: 100px;
-  color: red;
-  height: 80px;
-  width: 100px;
-  border: 1px solid red;
-}
-.Alive {
+.alive {
   height: 8px;
   width: 8px;
   border-radius: 50%;
@@ -13,7 +6,7 @@ h6 {
   display: flex;
   margin-right: 5px;
 }
-.Dead {
+.dead {
   height: 8px;
   width: 8px;
   border-radius: 50%;
