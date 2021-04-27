@@ -67,13 +67,13 @@ class App extends React.Component {
       <div>
         <section className="header">
           <div className="header_img-logo">
-            <a href="/">
+            <a>
               <img src={Logo}></img>
             </a>
           </div>
           <div className="header_container-links">
-            <a href="documentation">Docs</a>
-            <a href="About">About</a>
+            <a>Docs</a>
+            <a>About</a>
             <div className="header_container-links-button">
               <a>
                 <svg
@@ -88,7 +88,7 @@ class App extends React.Component {
                 </svg>
               </a>
               <div className="btn-help-us">
-                <a href="help-us">HELP US</a>
+                <a>HELP US</a>
               </div>
             </div>
           </div>
